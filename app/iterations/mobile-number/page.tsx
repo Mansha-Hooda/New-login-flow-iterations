@@ -49,6 +49,7 @@ export default function MobileNumberPage() {
                 maxLength={10}
                 placeholder="Enter Mobile Number"
                 value={mobile}
+                onFocus={() => { if (!mobile) setMobile("9999999999"); }}
                 onChange={(e) => setMobile(e.target.value.replace(/\D/g, "").slice(0, 10))}
                 className="flex-1 text-sm font-medium text-[#252D38] placeholder:text-[#70829B] outline-none bg-transparent"
                 style={{ fontFamily: "var(--font-lexend-deca)" }}

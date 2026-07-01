@@ -102,6 +102,7 @@ export default function CorporatePriorityPage() {
                     type="email"
                     placeholder="Enter Corporate Email"
                     value={email}
+                    onFocus={() => { if (!email) setEmail("user@medibuddy.in"); }}
                     onChange={(e) => setEmail(e.target.value)}
                     onKeyDown={(e) => e.key === "Enter" && handleProceed()}
                     autoComplete="email"
@@ -115,6 +116,7 @@ export default function CorporatePriorityPage() {
                     placeholder="Enter Mobile Number"
                     maxLength={10}
                     value={phone}
+                    onFocus={() => { if (!phone) setPhone("9999999999"); }}
                     onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                     onKeyDown={(e) => e.key === "Enter" && handleProceed()}
                     autoComplete="tel"

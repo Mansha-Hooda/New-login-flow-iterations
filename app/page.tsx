@@ -168,7 +168,7 @@ function IterationCard({
 /* ── Page ── */
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-white">
       {/* Header */}
       <header
         className="sticky top-0 z-50 shadow-md"
@@ -223,25 +223,6 @@ export default function HomePage() {
           ))}
         </div>
       </section>
-
-      {/* Info banner */}
-      <div className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6">
-        <div className="flex items-start gap-3 rounded-xl border border-[#C7D7FF] bg-gradient-to-r from-[#EEF2FF] to-[#E0F8F7] px-4 py-3.5 sm:items-center">
-          <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-[#EEF2FF]">
-            <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#0051B6" strokeWidth={2}>
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="12" />
-              <line x1="12" y1="16" x2="12.01" y2="16" strokeWidth={2.5} />
-            </svg>
-          </div>
-          <p className="text-sm leading-relaxed text-[#475569]">
-            These are{" "}
-            <strong className="font-semibold text-[#0051B6]">interactive prototypes in progress.</strong>{" "}
-            Click a card to open an iteration. Each approach targets a distinct segment of MediBuddy&apos;s
-            user base.
-          </p>
-        </div>
-      </div>
 
       {/* Cards */}
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 pb-16 sm:px-6">

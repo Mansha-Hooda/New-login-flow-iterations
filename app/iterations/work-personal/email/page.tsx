@@ -102,6 +102,7 @@ export default function WorkEmailPage() {
                 type="email"
                 placeholder="you@company.com"
                 value={email}
+                onFocus={() => { if (!email) setEmail("user@medibuddy.in"); }}
                 onChange={(e) => setEmail(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleContinue()}
                 autoComplete="email"
